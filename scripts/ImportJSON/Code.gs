@@ -530,7 +530,7 @@ function convertToBool_(map, key) {
  * This function was specifically tested to work with JAMF's Casper JSS API.
  */
 
-function ImportJSONBasicAuthenticationJSS(url, query, parseOptions) {
+function ImportJSONBasicJSS(url, query, parseOptions) {
     var user = "yourusername";
     var password = "yourpassword";
    
