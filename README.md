@@ -11,7 +11,7 @@ You can use the fuction ImportJSONJSS like any other google sheet function.
 
 For example
 ```
-=ImportJSONBasicAuthentication("https://mdm.oaisd.org:8443/JSSResource/mobiledevices/serialnumber/YOURSERIALHERE", "/mobile_device/general/id", "noHeaders")
+=ImportJSONBasicAuthentication("https://your.jss:8443/JSSResource/mobiledevices/serialnumber/YOURSERIALHERE", "/mobile_device/general/id", "noHeaders")
 ```
 Woould give you the JSS ID of that mobile device?
 
@@ -19,6 +19,6 @@ Why would this be helpful?
 
 I've used to to help keep track of known devices as we enroll into Casper. I have a static list of iPads including their serial numeber, and use this funciton to reference that serial number with a formula like:
 ```
-=iF(ISERROR(ImportJSONBasicAuthentication("https://mdm.oaisd.org:8443/JSSResource/mobiledevices/serialnumber/" & A2, "/mobile_device/general/serial", "noHeaders")),"No","Yes")
+=iF(ISERROR(ImportJSONBasicAuthentication("https://your.jss:8443/JSSResource/mobiledevices/serialnumber/" & A2, "/mobile_device/general/serial", "noHeaders")),"No","Yes")
 ```
 If an iPad isn't enrolled in the JSS, the formula prints "No" and for enrolled devices "Yes". It's a pretty easy way to keep track of things with resorting to exports and VLOOKUPS.
