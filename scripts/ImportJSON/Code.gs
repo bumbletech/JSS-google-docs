@@ -525,3 +525,29 @@ function convertToBool_(map, key) {
     map[key] = toBool_(map[key]);
   }  
 }
+
+/**
+ * This function was specifically tested to work with JAMF's Casper JSS API.
+ */
+
+function ImportJSONBasicAuthenticationJSS(url, query, parseOptions) {
+    var user = "yourusername";
+    var password = "yourpassword";
+   
+    var headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Basic "+ Utilities.base64Encode(user+":"+password)
+    };
+   
+   var fetchOptions = {
+        "method" : "get",
+        "headers" : headers,
+        muteHttpExceptions: true
+   };
+
+  return ImportJSONAdvanced(url, fetchOptions, query, parseOptions, includeXPath_, defaultTransform_);
+}
+
+
+
