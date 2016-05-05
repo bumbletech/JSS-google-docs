@@ -17,7 +17,7 @@ Would give you the JSS ID of that mobile device.
 
 Why would this be helpful?
 
-Maybe it's not for a lot of purposes, but I've used to to help keep track of known devices as we enroll into Casper. I have a static list of iPads including their serial numeber, and use this funciton to reference that serial number with a formula like:
+Maybe it's not for a lot of purposes, but I've used to to help keep track of known devices as we enroll into Casper. I have a static list of iPads including their serial number, and use this funciton to reference that serial number with a formula like:
 ```
 =iF(ISERROR(ImportJSONBasicAuthentication("https://your.jss:8443/JSSResource/mobiledevices/serialnumber/" & A2, "/mobile_device/general/serial", "noHeaders")),"No","Yes")
 ```
