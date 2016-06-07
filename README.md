@@ -1,7 +1,12 @@
 google-docs
 ===========
 
+
+
 Libraries and functions used within Google Docs
+Forked from Trevor Lohrbeer's import-json
+http://blog.fastfedora.com/projects/import-json
+https://github.com/fastfedora/google-docs
 
 Now with a function to pull JSON data from JAMF's Casper JSS API!
 
